@@ -242,16 +242,7 @@ class Player:
         else:
             return False
 
-class Computer:
-
-    def __init__(self):
-        self.board = Board()
-        self.fleet = [Boat("первый корабль", 3), Boat("второй корабль", 2), Boat("третий корабль", 2), Boat("четвертый корабль", 1), \
-         Boat("пятый корабль", 1), Boat("шестой корабль", 1), Boat("седьмой корабль", 1)]
-        self.opponent = None
-
-    def set_opponent(self, opponent):
-        self.opponent = opponent
+class Computer(Player):
 
     def position_fleet(self):
 
